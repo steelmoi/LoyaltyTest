@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-2">
+    <a class="btn btn-primary btn-sm" href="javascript:void()" (click)="onNew()">
+      <i class="fas fa-plus-circle">
+      </i>
+      Nuevo
+    </a>
+
+    <app-modal [isOpen]="isModalOpen" [title]="'Producto'" (closeModal)="closeModal()" (saveEvent)="onSave()">
+      <app-record-product [(product)]="productSelected" [submitted]="submitted" [(valid)]="isvalid" />
+    </app-modal>
+
+    <app-modal [isOpen]="isModalImageOpen" [title]="'Imagen'" (closeModal)="closeModal()" (saveEvent)="onSaveImage()">
+      <app-image-product (fileChange)="onSelectFile($event)"></app-image-product>
+    </app-modal>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-12 float-right">
+    <table class="table table-bordered table-striped dataTable dtr-inline">
+      <thead>
+        <tr>
+          <td></td>
+          <td>SKU</td>
+          <td>Descripcion</td>
+          <td>Precio</td>
+          <td>Stock</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>
+            @if (product.image) {
+            
+            <img [src]="GetPathImage(product.image)"
+                 alt=""
+                 width="100"
+                 height="100"
+                 class="img-fluid rounded-start" />
+            }
+            @else {
+            <a class="btn btn-info btn-sm" href="javascript:void()" (click)="openModalImage(product)">
+              <i class="fas fa-plus-circle">
+              </i>
+              Foto
+            </a>
+            }
+          </td>
+          <td>{{ product.skuProduct }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.stock }}</td>
+          <td style="max-width:50px !important;">
+            <a class="btn btn-info btn-sm" href="javascript:void()" (click)="onEdit(product)">
+              <i class="fas fa-pencil-alt">
+              </i>
+              Editar
+            </a>
+          </td>
+          <td style="max-width:50px !important;">
+            <a class="btn btn-primary btn-sm" href="javascript:void()">
+              <i class="fas fa-folder">
+              </i>
+              + Dir
+            </a>
+          </td>
+          <td style="max-width:50px !important;">
+            <a class="btn btn-danger btn-sm" href="javascript:void()" (click)="onDelete(product)">
+              <i class="fas fa-trash">
+              </i>
+              Eliminar
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

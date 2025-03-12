@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-2">
+    <label>Tienda</label>
+  </div>
+  <div class="col-2">
+    <select (change)="OnSelectStore($event)" [(ngModel)]="storeSelected" id="cmbStore" name="cmbStore">
+      <option *ngFor="let store of Stores" [ngValue]="store">{{store.storeName}}</option>
+    </select>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-2">
+    <label>Producto</label>
+  </div>
+  <div class="col-2">
+    <select (change)="OnSelectProduct($event)" [(ngModel)]="productSelected" id="cmbProduct" name="cmbProduct">
+      <option *ngFor="let product of Products" [ngValue]="product">{{product.skuProduct}}</option>
+    </select>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+@LoyaltyTest.Server_HostAddress = http://localhost:5038
+
+GET {{LoyaltyTest.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

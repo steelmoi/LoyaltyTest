@@ -1,0 +1,6 @@
+@if(menu.IsCollapsible) {
+<app-menu-collapsible [submenu]="menu" />
+}
+@else {
+<app-menu-fixed [submenu]="menu" />
+}

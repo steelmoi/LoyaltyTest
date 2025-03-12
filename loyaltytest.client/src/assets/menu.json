@@ -1,0 +1,49 @@
+[
+  {
+    "Title": "Catalogos",
+    "Icon": "fas fa-newspaper",
+    "IsCollapsible": true,
+    "IsVisible": true,
+    "Items": [
+      {
+        "Title": "Productos",
+        "Icon": "fab fa-shirtsinbulk",
+        "IsVisible": true,
+        "Route": "/product-list"
+      },
+      {
+        "Title": "Clientes",
+        "Icon": "fab fa-shirtsinbulk",
+        "IsVisible": true,
+        "Route": "/customer-list"
+      },
+      {
+
+        "Title": "Tiendas",
+        "Icon": "fab fa-shirtsinbulk",
+        "IsVisible": true,
+        "Route": "/store-list"
+      },
+      {
+        "Title": "Usuarios",
+        "Icon": "fab fa-shirtsinbulk",
+        "IsVisible": true,
+        "Route": "/user-list"
+      }      
+    ]
+  },
+  {
+    "Title": "Pedidos",
+    "Icon": "",
+    "IsCollapsible": false,
+    "IsVisible": true,
+    "Items": [
+      {
+        "Title": "Compras",
+        "Icon": "fas fa-cart-plus",
+        "IsVisible": true,
+        "Route": "shop-list"
+      }
+    ]
+  }
+]

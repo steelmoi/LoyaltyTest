@@ -1,0 +1,15 @@
+<div class="form-group" [formGroup]="storeForm">
+
+  <label for="code">Codigo</label>
+  <input type="text" class="form-control" formControlName="Code" id="Code" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['Code'].errors }"
+         [value]="store.storeCode | uppercase" [(ngModel)]="store.storeCode"
+         (change)="onChange($event)"
+         >
+  <label for="Name">Nombre</label>
+  <input type="text" class="form-control" formControlName="Name" id="Name" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['Name'].errors }"
+         [value]="store.storeName | uppercase" [(ngModel)]="store.storeName"
+         (change)="onChange($event)"
+         >
+</div>

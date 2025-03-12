@@ -1,0 +1,8 @@
+<li class="nav-item" [hidden]="!item.IsVisible" (click)="OnClickItem(item)">
+  <a class="nav-link">
+    <i class="{{item.Icon}}"></i>
+    <p>
+      {{item.Title}}
+    </p>
+  </a>
+</li>

@@ -1,0 +1,24 @@
+<div class="form-group" [formGroup]="productForm">
+
+  <label for="skuProduct">SKU</label>
+  <input type="text" class="form-control" formControlName="skuProduct" id="skuProduct" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['skuProduct'].errors }"
+         [value]="product.skuProduct | uppercase" [(ngModel)]="product.skuProduct"
+         >
+  <label for="description">Descripcion</label>
+  <input type="text" class="form-control" formControlName="description" id="description" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['description'].errors }"
+         [value]="product.description | uppercase" [(ngModel)]="product.description"
+         >
+
+  <label for="price">Precio</label>
+  <input type="number" class="form-control" formControlName="price" id="price" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['price'].errors }"
+         [value]="product.price" [(ngModel)]="product.price"
+         >
+  <label for="stock">Stock</label>
+  <input type="number" class="form-control" formControlName="stock" id="stock" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['stock'].errors }"
+         [value]="product.stock" [(ngModel)]="product.stock"
+         >
+</div>

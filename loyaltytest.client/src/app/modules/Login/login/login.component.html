@@ -1,0 +1,43 @@
+<div class="login-page bg-body-secondary">
+<div class="login-box">
+  <div class="login-logo?">
+    <h3>Iniciar Sesion</h3>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body" [formGroup]="loginForm">
+      <!--<form>-->
+      <div class="input-group mb-3">
+        <input type="text" formControlName="userCode" class="form-control" placeholder="Usuario"
+               [ngClass]="{ 'is-invalid': submitted && f['userCode'].errors }"
+               [value]="user.userCode | uppercase" [(ngModel)]="user.userCode" />
+        <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+      </div>
+      <div class="input-group mb-3">
+        <input type="password" formControlName="pass" class="form-control" placeholder="Password"
+               [ngClass]="{ 'is-invalid': submitted && f['pass'].errors }"
+               [value]="user.pass | uppercase" [(ngModel)]="user.pass" />
+        <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+      </div>
+        <!--begin::Row-->
+        <div class="row">
+          <div class="col-8">
+            
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <div class="d-grid gap-2">
+              <button type="button" (click)="onLogin()" class="btn btn-primary">Ingresar</button>
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!--end::Row-->
+      <!--</form>-->
+     
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+</div>
+<!-- /.login-box -->

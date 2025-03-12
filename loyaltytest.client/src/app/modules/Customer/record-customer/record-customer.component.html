@@ -1,0 +1,16 @@
+<div class="form-group" [formGroup]="customerForm">
+
+  <label for="customerName">Nombre</label>
+  <input type="text" class="form-control" formControlName="customerName" id="customerName" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['customerName'].errors }"
+         [value]="customer.customerName | uppercase" [(ngModel)]="customer.customerName">
+  <label for="customerFirstName">Apellido Paterno</label>
+  <input type="text" class="form-control" formControlName="customerFirstName" id="customerFirstName" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['customerFirstName'].errors }"
+         [value]="customer.customerFirstName | uppercase" [(ngModel)]="customer.customerFirstName">
+
+  <label for="customerLastName">Apellido Materno</label>
+  <input type="text" class="form-control" formControlName="customerLastName" id="customerLastName" placeholder=""
+         [ngClass]="{ 'is-invalid': submitted && f['customerLastName'].errors }"
+         [value]="customer.customerLastName | uppercase" [(ngModel)]="customer.customerLastName">
+</div>

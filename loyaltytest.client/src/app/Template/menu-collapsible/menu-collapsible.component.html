@@ -1,0 +1,12 @@
+<li class="nav-item">
+  <a class="nav-link">
+    <i class="nav-icon {{submenu.Icon}}"></i>
+    <p>
+      {{submenu.Title}}
+      <i class="fas fa-angle-left right"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+    <app-menu-item *ngFor="let item of submenu.Items;" [item]="item" />
+  </ul>
+</li>
