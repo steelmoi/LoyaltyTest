@@ -2,7 +2,7 @@
   {
     "Title": "Catalogos",
     "Icon": "fas fa-newspaper",
-    "IsCollapsible": true,
+    "IsCollapsible": false,
     "IsVisible": true,
     "Items": [
       {
